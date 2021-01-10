@@ -1,11 +1,51 @@
+import * as actions from '../actions/index';
 
 export const initialState = {
+
+    smurfs: [],
+    isLoading: false,
+    error: ''
+
 }
 
-const reducer = ()=>{
-}
+export const Reducer = (state = initialState, action) => {
 
-export default reducer;
+    switch(action.type) {
+        
+        case actions.GET_SMURFLIST_START:
+            return {
+                ...state,
+                isLoading: true,
+                error: ''
+            }
+        case actions.GET_SMURFLIST_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                smurfs: [],
+                error: action.payload
+            }
+        case actions.ADD_SMURF_START:
+            return {
+                ...state,
+                isLoading: true,
+                error: ''
+            }
+        case actions.ADD_SMURF_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                error: ''
+            }
+        case actions.ADD_SMURF_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
+            }
+        default: return state
+    }
+}
 
 //Task List:
 //1. Add in the initialState needed to hold: 
