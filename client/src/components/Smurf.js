@@ -9,17 +9,17 @@ class Smurf extends React.Component {
         console.log(smurf);
 
         return(<div data-testid="smurf" className="card">
-            <div>
-                <h5>
+            <div className='card-body'>
+                <h5 className='card-title'>
                     {smurf.name}
                 </h5>
-                <p>
+                <p className='card-text'>
                     {smurf.position}
                 </p>
-                <p>
+                <p className='card-text'>
                     {smurf.nickname}
                 </p>
-                <p>
+                <p className='card-text'>
                     {smurf.description}
                 </p>
             </div>

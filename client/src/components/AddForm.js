@@ -87,7 +87,7 @@ class AddForm extends React.Component {
         return(<section>
         <h2>Add Smurf</h2>
         <form>
-            <div>
+            <div className='form-group'>
                 <label htmlFor='name'>
                     Name:
                 </label>
@@ -99,7 +99,7 @@ class AddForm extends React.Component {
                     onChange={this.handleChange}
                  />
             </div>
-            <div>
+            <div className='form-group'>
                 <label htmlFor='position'>
                     Position:
                 </label>
@@ -111,7 +111,7 @@ class AddForm extends React.Component {
                     onChange={this.handleChange}
                  />
             </div>
-            <div>
+            <div className='form-group'>
                 <label htmlFor='nickname'>
                     Nickname:
                 </label>
@@ -123,7 +123,7 @@ class AddForm extends React.Component {
                     onChange={this.handleChange}
                  />
             </div>
-            <div>
+            <div className='form-group'>
                 <label htmlFor='description'>
                     Description:
                 </label>

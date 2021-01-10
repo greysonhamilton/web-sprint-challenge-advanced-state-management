@@ -18,6 +18,13 @@ export const Reducer = (state = initialState, action) => {
                 isLoading: true,
                 error: ''
             }
+        case actions.GET_SMURFLIST_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                smurfs: action.payload,
+                error: ''
+            }
         case actions.GET_SMURFLIST_FAILURE:
             return {
                 ...state,
@@ -35,6 +42,7 @@ export const Reducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
+                smurfs: action.payload,
                 error: ''
             }
         case actions.ADD_SMURF_FAILURE:
