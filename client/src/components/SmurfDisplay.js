@@ -1,10 +1,16 @@
 import React from 'react';
 
 export class SmurfDisplay extends React.Component {
+    
     render() {
-        return(<div>
+
+        return(
+        
+        <div>
             
-        </div>)
+        </div>
+        
+        )
     }
 }
 
